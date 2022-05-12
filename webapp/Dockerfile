@@ -7,4 +7,4 @@ RUN docker-php-ext-install -j$(nproc) mysqli pdo_mysql gd zip pcntl exif
 
 COPY ./src /var/www/html
 
-# ENV DB_PASSWORD=kinddevil
+ENV DB_PASSWORD=kinddevil
