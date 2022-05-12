@@ -4,4 +4,4 @@ ENV MYSQL_DATABASE="bme"
 COPY ./bme.sql /docker-entrypoint-initdb.d
 
 
-#EXPOSE 3306
+EXPOSE 3306
