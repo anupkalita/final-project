@@ -1,7 +1,7 @@
 
 <?php
 
-session_start();
+// session_start();
 
 // for user logout
 if(isset($_SESSION['username'])){
