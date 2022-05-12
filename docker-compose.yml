@@ -1,0 +1,8 @@
+version: "3"
+services:
+        
+        db:
+                image: mysql3
+                container_name: db
+        apache:
+                image: apache3
