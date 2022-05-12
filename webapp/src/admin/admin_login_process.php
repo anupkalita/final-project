@@ -14,7 +14,7 @@ if(isset($_POST['username'])){
         if($row == 1){
             echo "Successful Login";
             $_SESSION['username'] = $username;
-            header('Location:dashboard.php'); 
+            echo "<script>location.href = 'dashboard.php';</script>";
         }else{
             echo "<script>alert('invalid credentials');
                 location.href = 'admin_login.php';

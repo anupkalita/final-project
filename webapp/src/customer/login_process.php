@@ -15,7 +15,7 @@ if(isset($_POST['phone-email'])){
             $row = mysqli_fetch_assoc($result);
             echo "Success Login";
             $_SESSION['username'] = $row["username"];
-            header('Location:index.php'); 
+            echo "<script>location.href = 'index.php';</script>";
         }else{
             echo "<script>alert('invalid credentials');
                 location.href = 'customer_login.php';
