@@ -7,7 +7,7 @@ session_start();
 if(isset($_SESSION['username'])){
     session_destroy();
 
-    header('location:customer_login.php');
+    echo "<script>location.href = 'customer_login.php';</script>";
 
 }
 
