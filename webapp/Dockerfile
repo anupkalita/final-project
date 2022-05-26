@@ -12,5 +12,4 @@ RUN chown -R admin:admin /var/www/html/admin
 RUN chmod 777 /var/www/html/admin/add_event_process.php
 RUN chmod 777 /var/www/html/admin/event
 
-USER admin
 ENV DB_PASSWORD=kinddevil
