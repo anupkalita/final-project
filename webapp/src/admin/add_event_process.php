@@ -25,7 +25,7 @@ if(isset($_POST["submit"])){
     $sql = "INSERT INTO `event_details`(`event_id`, `event_name`, `price`, `date_time`, `poster`) VALUES (NULL,'$event_name','$price','$date','$destination')";
     $result = mysqli_query($conn, $sql);
 
-    header("location:dashboard.php");
+    echo "<script>location.href = 'dashboard.php';</script>";
     
     mysqli_close($conn);
 }
