@@ -4,9 +4,9 @@ pipeline{
     stages{
         stage ('build sql image') {
             steps{
-                sh "docker rm -f sql_container || true"
-                sh "docker rmi mysql_image || true"
-                sh "docker build -t mysql_image ./mysqldb"
+                sh "sudo docker rm -f sql_container || true"
+                sh "sudo docker rmi mysql_image || true"
+                sh "sudo docker build -t mysql_image ./mysqldb"
             }
         }
 
