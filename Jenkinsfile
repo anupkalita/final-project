@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage ('build sql image') {
             steps{
-                sh "docker image prune --all"
+                sh "docker image prune --force"
                 sh "docker rm -f sql_container || true"
                 sh "docker rmi mysql_image || true"
                 sh "docker build -t mysql_image ./mysqldb"
