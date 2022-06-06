@@ -4,9 +4,9 @@ pipeline{
     stages{
         stage ('build sql image') {
             steps{
-                sh "docker stop $(docker ps -aq) || true"
-                sh "docker rm $(docker ps -aq) || true"
-                sh "docker rmi $(docker images -q) || true"
+                sh "docker stop '$(docker ps -aq)' || true"
+                sh "docker rm '$(docker ps -aq)' || true"
+                sh "docker rmi '$(docker images -q)' || true"
                 sh "docker build -t mysql_image ./mysqldb"
             }
         }
