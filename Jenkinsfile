@@ -4,18 +4,15 @@ pipeline{
     stages{
         stage ('build sql image') {
             steps{
-                sh "docker rm -f sql_container || true"
-                sh "docker system prune --force"
-                sh "docker rmi mysql_image || true"
+                sh "docker stop $(docker ps -aq) || true"
+                sh "docker rm $(docker ps -aq) || true"
+                sh "docker rmi $(docker images -q) || true"
                 sh "docker build -t mysql_image ./mysqldb"
             }
         }
 
         stage ('build php image') {
             steps{
-                sh "docker rm -f php_container || true"
-                sh "docker system prune --force"
-                sh "docker rmi php_image || true"
                 sh "docker build -t php_image --no-cache ./webapp"
             }
         }
