@@ -7,7 +7,7 @@ if(!$_SESSION['username']){
 
     include "../db_conn.php";
 
-        $sql = "SELECT * FROM `transaction_history` ORDER BY date_booked desc";
+        $sql = "SELECT * FROM `transaction_history` ORDER BY transaction_id desc";
 
         $result = mysqli_query($conn, $sql);
         $arr = array();
