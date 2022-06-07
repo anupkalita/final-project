@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2022 at 05:58 PM
+-- Generation Time: Jun 07, 2022 at 01:09 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -52,13 +52,6 @@ CREATE TABLE `cart_history` (
   `event_id` int(255) NOT NULL,
   `quantity` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cart_history`
---
-
-INSERT INTO `cart_history` (`cart_id`, `customer_name`, `event_id`, `quantity`) VALUES
-(52, 'anup', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -122,15 +115,19 @@ CREATE TABLE `transaction_history` (
   `customer_name` varchar(255) NOT NULL,
   `total_event` varchar(255) NOT NULL,
   `total_price` int(255) NOT NULL,
-  `date_booked` datetime(6) NOT NULL
+  `date_booked` datetime(6) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `transaction_history`
 --
 
-INSERT INTO `transaction_history` (`transaction_id`, `customer_name`, `total_event`, `total_price`, `date_booked`) VALUES
-(30, 'anup', '3-gaint wheel (2021-11-21 12:00:00), ', 300, '2021-11-11 10:03:15.000000');
+INSERT INTO `transaction_history` (`transaction_id`, `customer_name`, `total_event`, `total_price`, `date_booked`, `status`) VALUES
+(32, 'anup', '1-Carousel (2021-11-20 12:00:00), ', 200, '2022-06-07 15:40:27.000000', 'cancelled'),
+(33, 'anup', '3-dino park (2021-11-22 13:01:00), ', 900, '2022-06-07 15:41:21.000000', 'delivered'),
+(35, 'anup', '1-dino park (2021-11-22 13:01:00), 1-joker land (2021-11-24 18:02:00), 1-Carousel (2021-11-20 12:00:00), ', 750, '2022-06-07 16:20:35.000000', 'delivered'),
+(36, 'anup', '1-dino park (2021-11-22 13:01:00), ', 300, '2022-06-07 16:39:04.000000', 'ordered');
 
 --
 -- Indexes for dumped tables
@@ -181,7 +178,7 @@ ALTER TABLE `admin_details`
 -- AUTO_INCREMENT for table `cart_history`
 --
 ALTER TABLE `cart_history`
-  MODIFY `cart_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `cart_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `customer_details`
@@ -199,7 +196,7 @@ ALTER TABLE `event_details`
 -- AUTO_INCREMENT for table `transaction_history`
 --
 ALTER TABLE `transaction_history`
-  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- Constraints for dumped tables
