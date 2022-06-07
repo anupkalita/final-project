@@ -25,12 +25,14 @@ function showTickets(){
                             <p>Booked Date:</p>
                             <p>Event:</p>
                             <p>Total Price:</p>
+                            <p>Status:</p>
                         </div>
                         <div class="order-details">
                             <p>${item.transaction_id}</p>
                             <p>${(item.date_booked).slice(0,10)}</p>
                             <p>${(item.total_event)}</p>
                             <p>${item.total_price}</p>
+                            <p>${item.status}</p>
                             <button class="ticket-btn">Cancel Ticket</button>
                         </div>
                     </div>

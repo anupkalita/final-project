@@ -197,8 +197,8 @@ function checkout(data){
                 console.log(JSON.parse(this.responseText));
                }
            }
-
-           const checkoutItem = `totalPrice=${totalPrice}&totalEvent=${totalEvent}&customer_name=${customer_name}`
+           let status = "ordered"
+           const checkoutItem = `totalPrice=${totalPrice}&totalEvent=${totalEvent}&customer_name=${customer_name}&status=${status}`
     
         xhr.send(checkoutItem);
     }else{

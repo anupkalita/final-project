@@ -12,9 +12,10 @@ if(isset($_POST['totalEvent'])){
     $total_price = $_POST['totalPrice'];
     $customer_name = $_POST['customer_name'];
     $total_event = $_POST['totalEvent'];
+    $status = $_POST['status'];
 
     // To store ordered ticket details in order_history
-    $sql = "INSERT INTO `transaction_history`(`transaction_id`, `customer_name`, `total_event`, `total_price`, `date_booked`) VALUES (NULL,'$customer_name','$total_event','$total_price',CURRENT_TIME())";
+    $sql = "INSERT INTO `transaction_history`(`transaction_id`, `customer_name`, `total_event`, `total_price`, `date_booked`, `status`) VALUES (NULL,'$customer_name','$total_event','$total_price',CURRENT_TIME(), '$status')";
 
     mysqli_query($conn, $sql);
 

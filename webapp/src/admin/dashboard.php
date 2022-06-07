@@ -31,7 +31,7 @@ if(!$_SESSION['username']){
         <ul id="nav">
             <li><a href="dashboard.php" class="active"><i class="fas fa-chart-line"></i></i><span>Dashboard</span></a></li>
             <li><a href="add_event.php"><i class="fas fa-calendar-week"></i></i><span>Add Event</span></a></li>
-            <li><a href="#"><i class="fas fa-list-alt"></i>Tickets Sold</span></a></li>
+            <li><a href="admin_orders.php"><i class="fas fa-list-alt"></i>Tickets Sold</span></a></li>
             <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
         </ul>
     </header>
