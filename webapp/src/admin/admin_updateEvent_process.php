@@ -12,7 +12,7 @@ if(!$_SESSION['username']){
     if(isset($_POST['Event_id'])){
         $Event_id = $_POST['Event_id'];
 
-        $sql = "DELETE FROM `Event_details` WHERE `Event_id` = '$Event_id'";
+        $sql = "DELETE FROM `event_details` WHERE `event_id` = '$Event_id'";
 
         mysqli_query($conn, $sql);
         
