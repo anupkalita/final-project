@@ -34,6 +34,11 @@
                 <input type="submit" value="Log In" name="submit">   
                 
             </form>
+
+            <div id="sign-up">
+                <p>Already have an account?</p>
+                <a href="../customer/customer_login.php">Login Here</a>
+            </div>
         </div>
 
         <div id="carousel-section">

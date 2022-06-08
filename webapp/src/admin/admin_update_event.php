@@ -18,7 +18,6 @@ if(!$_SESSION['username']){
     <title>BookMyEvent | Admin</title>
     <style>
         <?php include "dashboard.css" ?>
-        <?php include "../public/style.css" ?>
     </style>
 </head>
 <body>
@@ -31,39 +30,32 @@ if(!$_SESSION['username']){
         <ul id="nav">
             <li><a href="dashboard.php"><i class="fas fa-chart-line"></i></i><span>Dashboard</span></a></li>
             <li><a href="add_event.php"><i class="fas fa-calendar-week"></i></i><span>Add Event</span></a></li>
-            <li><a href="admin_update_event.php"><i class="fas fa-calendar-week"></i></i><span>Remove Event</span></a></li>
-            <li><a href="admin_orders.php"  class="active"><i class="fas fa-list-alt"></i>Tickets Sold</span></a></li>
+            <li><a href="admin_update_event.php"  class="active"><i class="fas fa-calendar-week"></i></i><span>Remove Event</span></a></li>
+            <li><a href="admin_orders.php"><i class="fas fa-list-alt"></i>Tickets Sold</span></a></li>
             <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
         </ul>
     </header>
 
     <table id="table">
         <!-- <tr id="table-head">
-            <th>OrderID</th>
-            <th>Customer Name</th>
             <th>Food</th>
+            <th>Food ID</th>
+            <th>Food Name</th>
+            <th>Category_ID</th>
+            <th>Category Name</th>
             <th>Price</th>
-            <th>Address</th>
-            <th>Date</th>
-            <th>Status</th>
+            <th>Delete</th>
         </tr>
         <tr>
             <td>Centro comercial Moctezuma</td>
             <td>Francisco Chang</td>
+            <td>Francisco Chang</td>
             <td>Mexico</td>
             <td>Centro comercial Moctezuma</td>
             <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>
-                <select name="status" id="status">
-                    <option value="ordered">Ordered</option>
-                    <option value="delivered">Delivered</option>
-                    <option value="cancelled">Cancelled</option>
-                </select>
-            </td>
+            <td><button id="delete-btn">Delete</button></td>
         </tr> -->
     </table>
-
 
 
     <!-- Footer Section -->
@@ -72,6 +64,6 @@ if(!$_SESSION['username']){
     </footer> -->
 
     <!-- JavaScript -->
-    <script src="admin_orders.js"></script>
+    <script src="admin_updateEvent.js"></script>
 </body>
 </html>
