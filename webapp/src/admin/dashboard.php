@@ -39,6 +39,11 @@ if(!$_SESSION['username']){
 
     <h1 class="admin-greeting">ADMIN DASHBOARD</h1>
 
+    <!-- dasboard section -->
+    <div id="dashboard" class="container">
+        
+    </div>
+
     <div id="display-category">
             
         </div>
