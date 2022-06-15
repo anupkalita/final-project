@@ -31,7 +31,7 @@ pipeline{
 
         stage ('run php container') {
             steps{ 
-                sh "docker run --name php_container -d -p 80:80 --network my_network php_image"
+                sh "docker run --name php_container -d -p 8081:80 --network my_network php_image"
             }
         }
         }
